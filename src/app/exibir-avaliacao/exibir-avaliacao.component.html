@@ -1,0 +1,28 @@
+<app-menu>
+    <div class="container">
+        <div class="items">
+            <div class="items-head">
+                <p>{{avaliacao?.disciplina?.nomeDisciplina}} - Avaliação Digital</p>
+                <p>{{avaliacao?.nomeAvaliacao}}</p>
+                <hr>
+            </div>
+
+            <div class="items-body" *ngFor="let questao of questoes">
+                <p>{{ questao?.enunciado }}</p>
+                <div class="items-body-content" *ngFor="let resposta of questao?.respostas">
+                    <span (click)="selecionarResposta(resposta, questao)"  [ngClass]="{'resposta-selecionada': resposta.selecionada}">
+                        {{ resposta?.textoResposta }}
+                    </span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12">
+            <div class="col-3"> </div>
+            <div class="col-6">
+                <button (click)="back()">Voltar</button>
+                <button (click)="entregarAvaliacao()" *ngIf="avaliacao?.status === 'aberta'">Entregar</button>
+            </div>
+        </div>
+    </div>
+</app-menu>

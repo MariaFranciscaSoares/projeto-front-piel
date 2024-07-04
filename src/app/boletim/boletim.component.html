@@ -1,0 +1,23 @@
+<app-menu>
+    <div class="container">
+        <table class="table caption-top">
+            <caption>BOLETIM</caption>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Disciplinas</th>
+                    <th  class="text-center" scope="col">Notas</th>
+                    <th  class="text-center" scope="col">Presenças</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let disciplina of disciplinas">
+                    <td class="text-center"></td>
+                    <td>{{ disciplina.nomeDisciplina }}</td>
+                    <td class="text-center">{{ disciplina.nota }}</td>
+                    <td class="text-center">{{ disciplina.presenca }}%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</app-menu>

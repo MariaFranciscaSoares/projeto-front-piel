@@ -1,0 +1,19 @@
+<app-menu  [titulo]="'Estágio'">
+    <div *ngIf="estagios.length > 0; else noData">
+        <h2>Estágios Obrigatórios</h2>
+        <ul>
+          <li *ngFor="let estagio of estagios">
+            <h3>{{ estagio.nome }}</h3>
+            <p><strong>Empresa:</strong> {{ estagio.empresa }}</p>
+            <p><strong>Descrição:</strong> {{ estagio.descricao }}</p>
+            <p><strong>Carga Horária:</strong> {{ estagio.cargaHoraria }}</p>
+            <p><strong>Tecnologia:</strong> {{ estagio.tecnologia }}</p>
+            <p><strong>Requisitos:</strong> {{ estagio.requisitos }}</p>
+          </li>
+        </ul>
+      </div>
+      
+      <ng-template #noData>
+        <p>Nenhum estágio obrigatório encontrado.</p>
+      </ng-template>
+</app-menu>

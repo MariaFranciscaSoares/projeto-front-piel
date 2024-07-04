@@ -1,0 +1,7 @@
+<app-menu  [titulo]="'Vídeos'">
+    <div class="videos-container conteudo-centralizado">
+        <button  [routerLink]="['/exibir-video', video.id]" *ngFor="let video of videos" type="button" class="btn btn-outline-dark">{{ video.nome }}
+            <img [src]="logoVideo" class="img-fluid rounded-circle" style="max-width: 100px;">
+        </button>
+    </div>
+</app-menu>

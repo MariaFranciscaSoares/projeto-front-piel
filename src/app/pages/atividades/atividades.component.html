@@ -1,0 +1,25 @@
+<app-menu [titulo]="'Atividades'">
+    <div class="frame">
+        <div class="center">
+            <section class="todo-cmp">
+                <header class="todo-cmp__header">
+                    <h2>{{ disciplina?.nomeDisciplina}}</h2>
+                    <P>ATIVIDADES</P>
+                </header>
+
+                <ul class="todo-cmp__list" *ngFor="let atividade of atividades">
+                    <li [ngClass]="{ 'concluida': atividade.statusAtividade === 'concluida', 'aberta': atividade.statusAtividade === 'aberta' }">
+                        <label for="todo-01">
+                            <span (click)="goToExibirAtividades(atividade.idAtividade)">
+                                {{ atividade.tituloAtividade }}
+                                <span *ngIf="atividade.statusAtividade === 'concluida'"> ✔</span>
+                                <span *ngIf="atividade.statusAtividade === 'aberta'"> - aberta</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <button (click)="backOptionDisciplina()">Voltar</button>
+</app-menu>

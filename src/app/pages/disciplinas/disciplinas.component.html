@@ -1,0 +1,38 @@
+<app-menu>
+    <div class="container" *ngIf="exibirAtividades">
+        <div class="items">
+            <div class="items-head">
+                <p *ngIf="disciplina">{{ disciplina.nomeDisciplina }}</p>
+                <hr>
+            </div>
+
+            <div class="items-body">
+                <div class="items-body-content">
+                    <span (click)="goToAulas(disciplina)">Aulas</span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+                <div class="items-body-content">
+                    <span (click)="goToAtividades(disciplina)">Atividades</span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        <button (click)="backDisciplinas()">Voltar</button>
+    </div>
+
+    <div class="container-lista-disciplinas" *ngIf="!exibirAtividades">
+        <div class="items">
+            <div class="items-head">
+                <p>DISCIPLINAS</p>
+                <hr>
+            </div>
+
+            <div class="items-body">
+                <div class="items-body-content" *ngFor="let disciplina of disciplinas">
+                    <span (click)="goToOpcaoDisciplinas(disciplina)">{{ disciplina.nomeDisciplina }}</span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-menu>

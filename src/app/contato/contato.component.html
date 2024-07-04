@@ -1,0 +1,70 @@
+<app-menu>
+    <section class="py-5">
+      <div class="container px-5">
+        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+          <div class="text-center mb-5">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <h1 class="fw-bolder">Entrar em contato</h1>
+            <p class="lead fw-normal text-muted mb-0">Adoraríamos ouvir de você</p>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="name" type="text" placeholder="Enter your name..." formControlName="name" />
+                  <label for="name">Nome completo</label>
+                  <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)"
+                       class="invalid-feedback">
+                    É necessário um nome.
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="email" type="email" placeholder="name@example.com" formControlName="email" />
+                  <label for="email">Email</label>
+                  <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)"
+                       class="invalid-feedback">
+                    <div *ngIf="contactForm.get('email')?.errors?.['required']">É necessário um e-mail.</div>
+                    <div *ngIf="contactForm.get('email')?.errors?.['email']">E-mail não é válido.</div>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" formControlName="phone" />
+                  <label for="phone">Telefone</label>
+                  <div *ngIf="contactForm.get('phone')?.invalid && (contactForm.get('phone')?.dirty || contactForm.get('phone')?.touched)"
+                       class="invalid-feedback">
+                    Um número de telefone é obrigatório.
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 10rem"
+                            formControlName="message"></textarea>
+                  <label for="message">Mensagem</label>
+                  <div *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)"
+                       class="invalid-feedback">
+                    Uma mensagem é necessária.
+                  </div>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center mb-3">
+                    <div class="fw-bolder">Envio do formulário realizado com sucesso</div>
+                    Para ativar este formulário, inscreva-se em
+                    <br />
+                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                  </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </app-menu>
+  

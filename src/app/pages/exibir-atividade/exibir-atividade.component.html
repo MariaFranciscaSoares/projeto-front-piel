@@ -1,0 +1,30 @@
+<app-menu>
+    <div class="container">
+        <div class="items">
+            <div class="items-head">
+                <p>{{ atividade?.tituloAtividade }}</p>
+                <hr>
+            </div>
+            <div class="items-body">
+
+                <ul class="todo-cmp__list">
+                    <li>
+                        <label>
+                            <span>{{ atividade?.descricaoAtividade }}</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <form>
+                <input type="file" id="file" class="custom-file-button" name="file">
+            </form>
+        </div>
+        <div class="row col-12">
+            <div class="col-3"> </div>
+            <div class="col-6"> 
+                <button (click)="backAtividades()">Voltar</button>
+                <button (click)="entregarAtividade()" *ngIf="atividade?.statusAtividade === 'aberta'">Entregar</button>
+            </div>
+        </div>
+    </div>
+</app-menu>

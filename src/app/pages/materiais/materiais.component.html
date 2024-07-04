@@ -1,0 +1,5 @@
+<app-menu>
+    <input type="search" (input)="filtrar()" placeholder="Digite o Título" [(ngModel)]="tituloPesquisado">
+    <app-apostilas [apostilas]="apostilas"></app-apostilas>
+    <app-artigos [artigos]="artigos"></app-artigos>
+</app-menu>

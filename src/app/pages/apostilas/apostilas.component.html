@@ -1,0 +1,22 @@
+<!-- <div class="apostilas-container conteudo-centralizado">
+    <button [routerLink]="['/exibir-apostila', apostila.idApostila]" *ngFor="let apostila of apostilas" type="button"
+        class="btn btn-outline-dark">{{ apostila.tituloApostila }}
+        <img [src]="logoApostila" class="img-fluid rounded-circle" style="max-width: 100px;">
+    </button>
+</div> -->
+
+<div class="container">
+    <div class="items">
+        <div class="items-head">
+            <p>APOSTILAS</p>
+            <hr>
+        </div>
+
+        <div class="items-body">
+            <div class="items-body-content" *ngFor="let apostila of apostilas">
+                <span  [routerLink]="['/exibir-apostila', apostila.idApostila]">{{ apostila.tituloApostila }}</span>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+</div>

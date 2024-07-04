@@ -1,0 +1,97 @@
+.calendario {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mes {
+  width: calc(85% / 3 - 20px);
+  /* Distribui igualmente os meses na linha */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgba(236, 235, 232, 0.678);
+  color: rgba(0, 0, 0, 0.693);
+  font-size: 20px;
+}
+
+.mes-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.semana-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dia,
+.dia-zerado {
+  width: auto;
+  /* Largura fixa para cada quadrado */
+  height: auto;
+  /* Altura fixa para manter uma forma quadrada */
+  padding-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.dia-zerado {
+  background-color: #cccccc5a;
+  opacity: 0.5;
+}
+
+.status {
+  display: inline-block;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.legenda {
+  border: 1px solid #ccc; /* Borda cinza */
+  border-radius: 1em;
+  color: rgb(223, 215, 215);
+  font-size: 18px;
+  background-color: rgb(34, 3, 100); /* Background interior cinza */
+  padding: 10px;
+  width: fit-content; /* Ajusta a largura ao conteúdo */
+  margin-bottom: 1em;
+}
+
+.item-legenda {
+  margin-bottom: 5px; /* Espaçamento entre os itens */
+}
+
+.status {
+  display: inline-block;
+  width: 15px; /* Tamanho do status */
+  height: 15px;
+  margin-right: 5px; /* Espaçamento entre o status e o texto */
+}
+
+.amarelo {
+  background-color: yellow;
+}
+
+.azul {
+  background-color: lightblue;
+}
+
+.vermelho {
+  background-color: red;
+}

@@ -1,0 +1,21 @@
+.container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 8em;
+    margin-bottom: 0;
+    display: grid;
+    place-items: center;
+    width: 80%;
+    margin-bottom: 5em;
+}
+
+caption {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding: 5px 20px;
+    color: #0790b3;
+    font-weight: bold;
+    font-size: 20px;
+}

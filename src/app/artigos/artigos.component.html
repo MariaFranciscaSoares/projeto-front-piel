@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="items">
+        <div class="items-head">
+            <p>ARTIGOS</p>
+            <hr>
+        </div>
+
+        <div class="items-body">
+            <div class="items-body-content" *ngFor="let artigo of artigos">
+                <span  [routerLink]="['/exibir-artigo', artigo.idArtigo]">{{ artigo.tituloArtigo }}</span>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+</div>

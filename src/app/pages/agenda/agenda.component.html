@@ -1,0 +1,36 @@
+<app-menu  [titulo]="'Calendário Semestral'">
+    <div class="container">
+        <div class="legenda">
+            <div class="item-legenda">
+                <span class="status amarelo"></span> Início e Fim das Aulas
+            </div>
+            <div class="item-legenda">
+                <span class="status azul"></span> Sábado, Domingo e Feriados
+            </div>
+            <div class="item-legenda">
+                <span class="status vermelho"></span> Provas
+            </div>
+        </div>
+    </div>
+
+    <div class="calendario">
+        <!-- Repetir para cada mês -->
+        <div *ngFor="let mes of calendario" class="mes">
+            <div class="mes-label">{{ mes.nome }}</div>
+            <div class="semana-header">
+                <span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span><span>sáb</span><span>dom</span>
+            </div>
+            <div class="dias">
+                <!-- Repetir para cada dia do mês -->
+                <ng-container *ngFor="let semana of mes.semanas">
+                    <ng-container *ngFor="let dia of semana">
+                        <div *ngIf="dia.dia !== 0" class="dia" [ngStyle]="{'background-color': getStatusColor(dia)}">
+                            {{ dia.dia }}
+                        </div>
+                        <div *ngIf="dia.dia === 0" class="dia-zerado"></div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</app-menu>

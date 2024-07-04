@@ -1,0 +1,204 @@
+.card {
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 0px;
+    background-color: #0790b3;
+    color: white;
+    margin-top: 0px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 8em;
+    display: grid;
+    place-items: center;
+    margin-bottom: 700px !important;
+}
+
+.items {
+    width: 700px;
+    background: #fffffe;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-top: 10px solid #0790b3;
+}
+
+.items-head p {
+    padding: 5px 20px;
+    margin: 10px;
+    color: #0790b3;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.items-head hr {
+    width: 20%;
+    margin: 0px 30px;
+    border: 1px solid #0790b3;
+}
+
+.items-body {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.items-body-content {
+    padding: 10px;
+    padding-right: 0px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    font-size: 18px;
+    grid-gap: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.items-body-content:hover {
+    border-radius: 15px;
+    border: 1px solid #0790b3;
+}
+
+.items-body-content i {
+    align-self: center;
+    font-size: 23px;
+    color: #0790b3;
+    font-weight: bold;
+    animation: icon 1.5s infinite forwards;
+}
+
+@keyframes icon {
+
+    0%,
+    100% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(3px);
+    }
+}
+
+button {
+    background: #0790b3;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    margin-bottom: 40em;
+    float: right;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+button:hover {
+    background: #fff;
+    color: #0790b3;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #0790b3;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+.todo-cmp__list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-cmp__list li {
+    padding: 10px 0 15px;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.todo-cmp__list li label {
+    cursor: pointer;
+    font-size: 0.82rem;
+    width: 100%;
+    display: block;
+}
+
+span {
+    font-size: 17px;
+}
+
+/* Estilizar o botão personalizado */
+.custom-file-button {
+  background-color: #e7e7e751;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #0790b3;
+}
+
+/* Estilizar o botão personalizado */
+.custom-file-button {
+  background-color: #e7e7e7;
+  border: 1px solid #ccc;
+  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #d1d1d1;
+}
+
+/* Estilizar o texto do nome do arquivo */
+.custom-file-name {
+  margin-left: 10px;
+  color: #666;
+}
+
+/* Estilizar o ícone do botão */
+.custom-file-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}

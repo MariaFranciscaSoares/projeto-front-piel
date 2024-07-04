@@ -1,0 +1,181 @@
+/* 
+:host {
+    --bg-color: #78ACCD;
+    --white: #ffffff;
+    --black: #333333;
+    --gray: #7D8994;
+    --orange: #DE6E46;
+    --purple: #AE5989;
+    --radius: 50%;
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+p {
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(3, 3, 72);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+.titulo-notica {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(3, 3, 72);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: #0790b3 solid 2px;
+    padding-top: 6em;
+    margin-top: 4em;
+}
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.texto {
+    float: left;
+    width: 50%;
+}
+
+.imagem {
+    float: right;
+    width: 50%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.container-noticias {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    height: auto;
+    overflow: auto;
+}
+
+.calendario {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 7em;
+}
+
+.container-calendario {
+    margin-left: 15em;
+}
+
+.mes {
+    width: calc(85% / 3 - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(236, 235, 232, 0.678);
+    color: rgba(0, 0, 0, 0.693);
+    font-size: 20px;
+    background: var(--white);
+    margin: 1rem 10px;   
+    grid-template-rows: 8rem auto 10rem;
+}
+
+.mes-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.semana-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.dia,
+.dia-zerado {
+    width: auto;
+    height: auto;
+    padding-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.dia-zerado {
+    background-color: #cccccc5a;
+    opacity: 0.5;
+}
+
+.status {
+    display: inline-block;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.container-agenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.legenda {
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    color: rgb(223, 215, 215);
+    font-size: 18px;
+    background-color: rgb(34, 3, 100);
+    padding: 10px;
+    width: fit-content;
+    margin-bottom: 1em;
+}
+
+.item-legenda {
+    margin-bottom: 5px;
+}
+
+.status {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.azul {
+    background-color: lightblue;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.header {
+    background-color: #0790b3 !important;
+} */
